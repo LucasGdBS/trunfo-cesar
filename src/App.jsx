@@ -1,10 +1,16 @@
-import Carta from "./Components/Carta"
+import Container from "./Components/Container"
+import Baralho from "./Components/Baralho";
+import cards from "../cards.json";
 
 function App() {
+  const cartas = cards
 
   return (
     <>
-      <Carta texto={"Isso é super legal"}/>
+      <Container>
+        {/* <Baralho cartas={cartas} /> */}
+        <Baralho cartas={cartas}/>
+      </Container>
     </>
   )
 }

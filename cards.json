@@ -1,0 +1,12 @@
+[
+    {"destinatario": "João", "texto": "Mensagem para João"},
+    {"destinatario": "Maria", "texto": "Mensagem para Maria"},
+    {"destinatario": "José", "texto": "Mensagem para José"},
+    {"destinatario": "Ana", "texto": "Mensagem para Ana"},
+    {"destinatario": "Pedro", "texto": "Mensagem para Pedro"},
+    {"destinatario": "Paulo", "texto": "Mensagem para Paulo"},
+    {"destinatario": "Lucas", "texto": "Mensagem para Lucas"},
+    {"destinatario": "Marta", "texto": "Mensagem para Marta"},
+    {"destinatario": "Rita", "texto": "Mensagem para Rita"},
+    {"destinatario": "Carla", "texto": "Mensagem para Carla"}
+]
