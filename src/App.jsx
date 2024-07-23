@@ -8,7 +8,6 @@ function App() {
   return (
     <>
       <Container>
-        {/* <Baralho cartas={cartas} /> */}
         <Baralho cartas={cartas}/>
       </Container>
     </>

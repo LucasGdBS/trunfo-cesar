@@ -1,40 +1,37 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import Carta from "../Carta";
 import PropTypes from "prop-types";
-import { useState } from 'react';
-import Carta from '../Carta';
+import "swiper/css";
 
-const Baralho = ({ cartas }) => {
-  const [cards, ] = useState(cartas);
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+import "swiper/css/effect-cards";
 
-  const handleSwipeLeft = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
-  };
+import { EffectCards, Keyboard, A11y } from "swiper/modules";
 
-  const handleSwipeRight = () => {
-    setCurrentCardIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
-  };
-
+function Baralho({ cartas }) {
   return (
-    <div>
-      <Carta
-        destinatario={cards[currentCardIndex].destinatario}
-        texto={cards[currentCardIndex].texto}
-        onSwipeLeft={handleSwipeLeft}
-        onSwipeRight={handleSwipeRight}
-      />
-    </div>
+    <Swiper
+      rewind={true}
+      effect="cards"
+      grabCursor={true}
+      modules={[EffectCards, Keyboard, A11y]}
+      spaceBetween={50}
+      slidesPerView={1}
+      a11y={{enabled: true}}
+      keyboard={{
+        enabled: true,
+      }}
+    >
+      {cartas.map((carta, index) => (
+        <SwiperSlide key={index}>
+          <Carta destinatario={carta.destinatario} texto={carta.texto} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
-};
-
-Baralho.propTypes = {
-  cartas: PropTypes.arrayOf(
-    PropTypes.shape({
-      destinatario: PropTypes.string.isRequired,
-      texto: PropTypes.string.isRequired,
-    })
-  ),
 }
 
+Baralho.propTypes = {
+  cartas: PropTypes.array.isRequired,
+};
+
 export default Baralho;
-
-
