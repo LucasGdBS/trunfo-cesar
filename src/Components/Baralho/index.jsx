@@ -5,9 +5,11 @@ import PropTypes from "prop-types";
 import "swiper/css";
 
 import "swiper/css/effect-cards";
+import "swiper/css/virtual";
 
-import { EffectCards, Keyboard, A11y } from "swiper/modules";
+import { EffectCards, Keyboard, A11y, Virtual } from "swiper/modules";
 import { useEffect, useState } from "react";
+import { isMobile } from 'react-device-detect';
 
 function Baralho({ cartas }) {
   const [visible, setVisible] = useState(true);
@@ -22,14 +24,19 @@ function Baralho({ cartas }) {
     return () => clearTimeout(timer);
   }, []);
 
+  const baseModules = [EffectCards, Keyboard, A11y];
+
+  const modules = isMobile ? [...baseModules, Virtual] : baseModules;
+
   return (
     <Swiper
+      virtual={isMobile}
       key={touchEnabled ? 'enabled' : 'disabled'}
       allowTouchMove={touchEnabled}
       rewind={true}
       effect="cards"
       grabCursor={true}
-      modules={[EffectCards, Keyboard, A11y]}
+      modules={modules}
       spaceBetween={50}
       slidesPerView={1}
       a11y={{ enabled: true }}
@@ -43,7 +50,7 @@ function Baralho({ cartas }) {
         </SwiperSlide>
       )}
       {cartas.map((carta, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} virtualIndex={index}>
           <Carta destinatario={carta.destinatario} texto={carta.texto} />
         </SwiperSlide>
       ))}
