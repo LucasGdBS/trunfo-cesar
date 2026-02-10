@@ -77,5 +77,15 @@
     {"destinatario": "LIDERADO", "texto": "Você nunca falha em decepcionar, é impressionante"},
     {"destinatario": "LIDERADO", "texto": "É incrível como você sempre acha um jeito de complicar tudo"},
     {"destinatario": "LIDERADO", "texto": "Parece que seguir instruções simples não é o seu forte"},
-    {"destinatario": "LIDERADO", "texto": "Sua falta de iniciativa é, no mínimo, esperada"}
+    {"destinatario": "LIDERADO", "texto": "Sua falta de iniciativa é, no mínimo, esperada"},
+    {"destinatario": "COLEGA","texto": "Você é irresponsável, apagou todo otrabalho do grupo porque não sabe o básico da ferramenta."},
+    {"destinatario": "LIDERADO","texto": "Esses slides estão ridículos e com cores infantis, parece que você não tem o menor senso estético."},
+    {"destinatario": "LIDER","texto": "O João é um falso, ele apresentou a minha ideia na reunião como se fosse dele para ganhar crédito."},
+    {"destinatario": "COLEGA","texto": "É impossível discutir algo com você, você fica o tempo todo no celular rindo e ignora o que o grupo está falando."},
+    {"destinatario": "LIDERADO","texto": "Seu código é um lixo, está cheio de bugs que qualquer júnior evitaria se prestasse atenção."},
+    {"destinatario": "LIDER","texto": "O João é bipolar, decide uma tecnologia hoje e amanhã muda tudo da cabeça dele, deixando a equipe louca."},
+    {"destinatario": "COLEGA","texto": "Você tem preguiça de ler? A resposta para essa sua pergunta idiota está na documentação que eu mandei há três dias."},
+    {"destinatario": "LIDERADO","texto": "Sua falta de respeito com o horário da Daily está desmotivando todo mundo, você se acha especial demais para chegar na hora?"},
+    {"destinatario": "COLEGA","texto": "Na hora do brainstorming você fica mudo, mas agora quer dar palpite e criticar quem fez? Pura hipocrisia."},
+    {"destinatario": "LIDER","texto": "O João não tem postura profissional, fica de câmera desligada e comendo durante a apresentação do cliente."}
 ]
